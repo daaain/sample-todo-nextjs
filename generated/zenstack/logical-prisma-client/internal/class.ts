@@ -37,12 +37,12 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/dain/workspace/sample-todo-nextjs/logical-1758615462612.prisma",
+    "sourceFilePath": "/Users/dain/workspace/sample-todo-nextjs/logical-1759305941619.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../..",
-  "clientVersion": "6.16.2",
-  "engineVersion": "1c57fdcd7e44b29b9313256c76699e91c3ac3c43",
+  "clientVersion": "6.16.3",
+  "engineVersion": "bb420e667c1820a8c05a38023385f6cc7ef8e83a",
   "datasourceNames": [
     "db"
   ],

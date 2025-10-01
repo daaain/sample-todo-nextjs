@@ -55,9 +55,9 @@ export function enhance<ExtArgs extends Record<string, any> & InternalArgs>(
     context?: EnhancementContext<auth.User>, options?: EnhancementOptions): PrismaClient & ModelCheckers;
 
 // overload for extended PrismaClient
-export function enhance<ExtArgs extends Record<string, any> & InternalArgs, ClientOptions>(
-    prisma: DynamicClientExtensionThis<_Prisma.TypeMap<ExtArgs>, _Prisma.TypeMapCb, ExtArgs, ClientOptions>,
-    context?: EnhancementContext<auth.User>, options?: EnhancementOptions): DynamicClientExtensionThis<Prisma.TypeMap<ExtArgs>, Prisma.TypeMapCb, ExtArgs, ClientOptions> & ModelCheckers;
+export function enhance<ExtArgs extends Record<string, any> & InternalArgs>(
+    prisma: DynamicClientExtensionThis<_Prisma.TypeMap<ExtArgs>, _Prisma.TypeMapCb, ExtArgs>,
+    context?: EnhancementContext<auth.User>, options?: EnhancementOptions): DynamicClientExtensionThis<Prisma.TypeMap<ExtArgs>, Prisma.TypeMapCb, ExtArgs> & ModelCheckers;
 
 export function enhance(prisma: any, context?: EnhancementContext<auth.User>, options?: EnhancementOptions): any {
     return createEnhancement(prisma, {
@@ -76,5 +76,5 @@ export function enhance(prisma: any, context?: EnhancementContext<auth.User>, op
  */
 export type Enhanced<Client> =
     Client extends _PrismaClient<any, any, any> ? PrismaClient :
-    Client extends DynamicClientExtensionThis<_Prisma.TypeMap<infer ExtArgs>, infer _TypeMapCb, infer ExtArgs, infer ClientOptions> ? DynamicClientExtensionThis<Prisma.TypeMap<ExtArgs>, Prisma.TypeMapCb, ExtArgs, ClientOptions> : Client;
+    Client extends DynamicClientExtensionThis<_Prisma.TypeMap<infer ExtArgs>, infer _TypeMapCb, infer ExtArgs> ? DynamicClientExtensionThis<Prisma.TypeMap<ExtArgs>, Prisma.TypeMapCb, ExtArgs> : Client;
 
